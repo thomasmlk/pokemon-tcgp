@@ -1,0 +1,226 @@
+[
+  {
+    "id": "1",
+    "name": "Bulbasaur",
+    "type": "Grass",
+    "image": "/pokedex/bulbasaur.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "2",
+    "name": "Ivysaur",
+    "type": "Grass",
+    "image": "/pokedex/ivysaur.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "3",
+    "name": "Venusaur",
+    "type": "Grass",
+    "image": "/pokedex/venusaur.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "3",
+    "name": "Venusaur-Ex",
+    "type": "Grass",
+    "image": "/pokedex/venusaur-ex.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "10",
+    "name": "Caterpie",
+    "type": "Grass",
+    "image": "/pokedex/caterpie.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "11",
+    "name": "Metapod",
+    "type": "Grass",
+    "image": "/pokedex/metapod.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "12",
+    "name": "Butterfree",
+    "type": "Grass",
+    "image": "/pokedex/butterfree.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "13",
+    "name": "Weedle",
+    "type": "Grass",
+    "image": "/pokedex/weedle.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "14",
+    "name": "Kakuna",
+    "type": "Grass",
+    "image": "/pokedex/kakuna.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "15",
+    "name": "Beedrill",
+    "type": "Grass",
+    "image": "/pokedex/beedrill.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "43",
+    "name": "Oddish",
+    "type": "Grass",
+    "image": "/pokedex/oddish.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "44",
+    "name": "Gloom",
+    "type": "Grass",
+    "image": "/pokedex/gloom.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "45",
+    "name": "Vileplume",
+    "type": "Grass",
+    "image": "/pokedex/vileplume.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "46",
+    "name": "Paras",
+    "type": "Grass",
+    "image": "/pokedex/paras.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "47",
+    "name": "Parasect",
+    "type": "Grass",
+    "image": "/pokedex/parasect.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "48",
+    "name": "Venonat",
+    "type": "Grass",
+    "image": "/pokedex/venonat.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "49",
+    "name": "Venomoth",
+    "type": "Grass",
+    "image": "/pokedex/venomoth.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "69",
+    "name": "Bellsprout",
+    "type": "Grass",
+    "image": "/pokedex/bellsprout.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "70",
+    "name": "Weepinbell",
+    "type": "Grass",
+    "image": "/pokedex/weepinbell.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "71",
+    "name": "Victreebel",
+    "type": "Grass",
+    "image": "/pokedex/victreebel.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "102",
+    "name": "Exeggcute",
+    "type": "Grass",
+    "image": "/pokedex/exeggcute.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "103",
+    "name": "Exeggutor",
+    "type": "Grass",
+    "image": "/pokedex/exeggutor.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "103",
+    "name": "Exeggutor-Ex",
+    "type": "Grass",
+    "image": "/pokedex/exeggutor-ex.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "114",
+    "name": "Tangela",
+    "type": "Grass",
+    "image": "/pokedex/tangela.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "123",
+    "name": "Scyther",
+    "type": "Grass",
+    "image": "/pokedex/scyther.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "127",
+    "name": "Pinsir",
+    "type": "Grass",
+    "image": "/pokedex/pinsir.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "546",
+    "name": "Cottonee",
+    "type": "Grass",
+    "image": "/pokedex/cottonee.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "547",
+    "name": "Whimsicott",
+    "type": "Grass",
+    "image": "/pokedex/whimsicott.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "548",
+    "name": "Petilil",
+    "type": "Grass",
+    "image": "/pokedex/petilil.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "549",
+    "name": "Lilligant",
+    "type": "Grass",
+    "image": "/pokedex/lilligant.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "672",
+    "name": "Skiddo",
+    "type": "Grass",
+    "image": "/pokedex/skiddo.png",
+    "pack": "Genetic Apex"
+  },
+  {
+    "id": "673",
+    "name": "Gogoat",
+    "type": "Grass",
+    "image": "/pokedex/gogoat.png",
+    "pack": "Genetic Apex"
+  }
+]
