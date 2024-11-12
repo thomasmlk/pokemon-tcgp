@@ -26,7 +26,7 @@ const Pokedex = () => {
   }, []); // Le tableau vide fait en sorte que l'effet s'exécute seulement au montage du composant
 
   return (
-    <div className="px-5 mt-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
+    <div className="px-5 mt-24 lg:mt-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
       <div className="bg-background relative flex overflow-hidden justify-center items-center w-full p-14 rounded-t-xl shadow-lg shadow-foreground/15">
         <h1 className="font-bold text-2xl tracking-tight z-10">Collection</h1>
         <div className="absolute w-full h-full md:bottom-5">
@@ -55,9 +55,7 @@ const Pokedex = () => {
           ))}
         </div>
       ) : (
-        <p className="text-center text-lg text-gray-500">
-          No Pokémon found.
-        </p>
+        <p className="text-center text-lg text-gray-500">No Pokémon found.</p>
       )}
     </div>
   );
