@@ -64,7 +64,7 @@ export default function Pokedex() {
         </Button>
       </div>
       {/* Grille de Pokémon */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-5 gap-y-10 md:gap-y-20 md:gap-x-10 mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-5 gap-y-10 md:gap-y-20 md:gap-x-10 mt-10">
         {allDex
           .filter((dex) => {
             return dex.name.toLowerCase().includes(query.toLowerCase());
@@ -88,6 +88,17 @@ export default function Pokedex() {
             } else {
               icons = ["/rarity/rarity_03.png"];
             }
+
+            const getPackIcon = (pack: string) => {
+              switch (pack) {
+                case "Genetic Apex":
+                  return "/pack/apex_mewtwo.png";
+                default:
+                  return null;
+              }
+            };
+
+            const packIcon = getPackIcon(dex.pack);
 
             return (
               <div
@@ -123,16 +134,26 @@ export default function Pokedex() {
                     <span>Catch {dex.name}</span>
                   )}
                 </Button>
-                <div className="flex gap-1">
-                  {icons.map((icon, i) => (
+                <div className="flex justify-between relative">
+                  <div className="flex gap-1">
+                    {icons.map((icon, i) => (
+                      <Image
+                        key={i}
+                        src={icon}
+                        alt="Rarity"
+                        width={14}
+                        height={14}
+                      />
+                    ))}
+                  </div>
+                  <div className="h-full w-10 relative">
                     <Image
-                      key={i}
-                      src={icon}
-                      alt="Rarity"
-                      width={12}
-                      height={12}
+                      src={packIcon as string}
+                      alt={dex.pack}
+                      fill
+                      objectFit="contain"
                     />
-                  ))}
+                  </div>
                 </div>
               </div>
             );
