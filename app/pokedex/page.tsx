@@ -6,7 +6,6 @@ import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 export default function Pokedex() {
   const searchParams = useSearchParams();
@@ -45,7 +44,6 @@ export default function Pokedex() {
   };
 
   return (
-    <Suspense>
     <div className="px-5 mt-24 lg:mt-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
       {/* Header de la collection */}
       <div className="bg-background relative flex overflow-hidden justify-center items-center w-full p-14 rounded-t-xl shadow-lg shadow-foreground/15">
@@ -104,6 +102,5 @@ export default function Pokedex() {
           })}
       </div>
     </div>
-    </Suspense>
   );
 }
