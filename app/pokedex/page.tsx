@@ -1,13 +1,13 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
 
-export function Pokedex() {
+export default function Pokedex() {
   const searchParams = useSearchParams();
   const query = searchParams.get("query") || "";
   const collectionSvg = "/pokedex/collection.svg";
@@ -102,13 +102,5 @@ export function Pokedex() {
           })}
       </div>
     </div>
-  );
-}
-
-export default function PokedexPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Pokedex />
-    </Suspense>
   );
 }
