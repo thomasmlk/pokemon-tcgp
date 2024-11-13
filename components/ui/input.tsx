@@ -1,7 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import { Suspense } from "react";
 
 const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
   ({ className, type, placeholder, ...props }, ref) => {
@@ -20,7 +19,6 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
     }
 
     return (
-      <Suspense>
       <input
         type={type}
         placeholder={placeholder}
@@ -35,7 +33,6 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
         ref={ref}
         {...props}
       />
-      </Suspense>
     );
   }
 );
