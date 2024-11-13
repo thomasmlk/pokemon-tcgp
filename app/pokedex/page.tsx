@@ -6,7 +6,7 @@ import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
-import { RotateCcw } from "lucide-react";
+import { RotateCcw, Diamond } from "lucide-react";
 
 export default function Pokedex() {
   const searchParams = useSearchParams();
@@ -64,7 +64,7 @@ export default function Pokedex() {
         </Button>
       </div>
       {/* Grille de Pokémon */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-5 gap-y-10 md:gap-y-20 md:gap-x-10 mt-10">
         {allDex
           .filter((dex) => {
             return dex.name.toLowerCase().includes(query.toLowerCase());
@@ -72,8 +72,33 @@ export default function Pokedex() {
           .map((dex, i) => {
             const isCaught = caughtPokemons[dex.name as string] || false;
 
+            // Déclaration d'état pour stocker les icônes à afficher
+            const [rarityIcons, setRarityIcons] = useState<string[]>([]);
+
+            useEffect(() => {
+              const rarityValue = parseInt(dex.rarity);
+
+              if (rarityValue >= 1 && rarityValue <= 4) {
+                // Répéter l'icône en fonction de la rareté (1, 2 ou 3)
+                const icons = Array.from(
+                  { length: rarityValue },
+                  () => "/rarity/rarity_01.png"
+                );
+                setRarityIcons(icons);
+              } else if (rarityValue >= 5 && rarityValue <= 7) {
+                // Rareté 4, afficher une autre icône
+                setRarityIcons(["/rarity/rarity_02.png"]);
+              } else {
+                // Rareté 5, afficher une autre icône
+                setRarityIcons(["/rarity/rarity_03.png"]);
+              }
+            }, [dex.rarity]);
+
             return (
-              <div key={i} className="relative group">
+              <div
+                key={i}
+                className="relative group flex flex-col gap-4 md:gap-0"
+              >
                 {/* Carte Pokémon */}
                 <div
                   className={`w-full h-full md:bottom-5 aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 md:group-hover:scale-105 transition-all duration-700 ease-in-out ${
@@ -103,6 +128,17 @@ export default function Pokedex() {
                     <span>Catch {dex.name}</span>
                   )}
                 </Button>
+                <div className="flex gap-1">
+                  {rarityIcons.map((icon, i) => (
+                    <Image
+                      key={i}
+                      src={icon}
+                      alt="Rarity icon"
+                      width={12}
+                      height={12}
+                    />
+                  ))}
+                </div>
               </div>
             );
           })}

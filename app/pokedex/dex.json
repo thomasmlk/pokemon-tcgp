@@ -4,6 +4,7 @@
     "name": "Bulbasaur",
     "type": "Grass",
     "image": "/pokedex/bulbasaur.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -11,6 +12,7 @@
     "name": "Ivysaur",
     "type": "Grass",
     "image": "/pokedex/ivysaur.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -18,6 +20,7 @@
     "name": "Venusaur",
     "type": "Grass",
     "image": "/pokedex/venusaur.png",
+    "rarity": "3",
     "pack": "Genetic Apex"
   },
   {
@@ -25,6 +28,7 @@
     "name": "Venusaur-Ex",
     "type": "Grass",
     "image": "/pokedex/venusaur-ex.png",
+    "rarity": "4",
     "pack": "Genetic Apex"
   },
   {
@@ -32,6 +36,7 @@
     "name": "Caterpie",
     "type": "Grass",
     "image": "/pokedex/caterpie.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -39,6 +44,7 @@
     "name": "Metapod",
     "type": "Grass",
     "image": "/pokedex/metapod.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -46,6 +52,7 @@
     "name": "Butterfree",
     "type": "Grass",
     "image": "/pokedex/butterfree.png",
+    "rarity": "3",
     "pack": "Genetic Apex"
   },
   {
@@ -53,6 +60,7 @@
     "name": "Weedle",
     "type": "Grass",
     "image": "/pokedex/weedle.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -60,6 +68,7 @@
     "name": "Kakuna",
     "type": "Grass",
     "image": "/pokedex/kakuna.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -67,6 +76,7 @@
     "name": "Beedrill",
     "type": "Grass",
     "image": "/pokedex/beedrill.png",
+    "rarity": "3",
     "pack": "Genetic Apex"
   },
   {
@@ -74,6 +84,7 @@
     "name": "Oddish",
     "type": "Grass",
     "image": "/pokedex/oddish.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -81,6 +92,7 @@
     "name": "Gloom",
     "type": "Grass",
     "image": "/pokedex/gloom.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -88,6 +100,7 @@
     "name": "Vileplume",
     "type": "Grass",
     "image": "/pokedex/vileplume.png",
+    "rarity": "3",
     "pack": "Genetic Apex"
   },
   {
@@ -95,6 +108,7 @@
     "name": "Paras",
     "type": "Grass",
     "image": "/pokedex/paras.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -102,6 +116,7 @@
     "name": "Parasect",
     "type": "Grass",
     "image": "/pokedex/parasect.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -109,6 +124,7 @@
     "name": "Venonat",
     "type": "Grass",
     "image": "/pokedex/venonat.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -116,6 +132,7 @@
     "name": "Venomoth",
     "type": "Grass",
     "image": "/pokedex/venomoth.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -123,6 +140,7 @@
     "name": "Bellsprout",
     "type": "Grass",
     "image": "/pokedex/bellsprout.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -130,6 +148,7 @@
     "name": "Weepinbell",
     "type": "Grass",
     "image": "/pokedex/weepinbell.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -137,6 +156,7 @@
     "name": "Victreebel",
     "type": "Grass",
     "image": "/pokedex/victreebel.png",
+    "rarity": "3",
     "pack": "Genetic Apex"
   },
   {
@@ -144,6 +164,7 @@
     "name": "Exeggcute",
     "type": "Grass",
     "image": "/pokedex/exeggcute.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -151,6 +172,7 @@
     "name": "Exeggutor",
     "type": "Grass",
     "image": "/pokedex/exeggutor.png",
+    "rarity": "3",
     "pack": "Genetic Apex"
   },
   {
@@ -158,6 +180,7 @@
     "name": "Exeggutor-Ex",
     "type": "Grass",
     "image": "/pokedex/exeggutor-ex.png",
+    "rarity": "4",
     "pack": "Genetic Apex"
   },
   {
@@ -165,6 +188,7 @@
     "name": "Tangela",
     "type": "Grass",
     "image": "/pokedex/tangela.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -172,6 +196,7 @@
     "name": "Scyther",
     "type": "Grass",
     "image": "/pokedex/scyther.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -179,6 +204,7 @@
     "name": "Pinsir",
     "type": "Grass",
     "image": "/pokedex/pinsir.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -186,6 +212,7 @@
     "name": "Cottonee",
     "type": "Grass",
     "image": "/pokedex/cottonee.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -193,6 +220,7 @@
     "name": "Whimsicott",
     "type": "Grass",
     "image": "/pokedex/whimsicott.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -200,6 +228,7 @@
     "name": "Petilil",
     "type": "Grass",
     "image": "/pokedex/petilil.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -207,6 +236,7 @@
     "name": "Lilligant",
     "type": "Grass",
     "image": "/pokedex/lilligant.png",
+    "rarity": "2",
     "pack": "Genetic Apex"
   },
   {
@@ -214,6 +244,7 @@
     "name": "Skiddo",
     "type": "Grass",
     "image": "/pokedex/skiddo.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   },
   {
@@ -221,6 +252,7 @@
     "name": "Gogoat",
     "type": "Grass",
     "image": "/pokedex/gogoat.png",
+    "rarity": "1",
     "pack": "Genetic Apex"
   }
 ]
