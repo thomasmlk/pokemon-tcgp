@@ -14,7 +14,7 @@ export default function Pokedex() {
 
   // État pour garder les informations des Pokémon capturés
   const [caughtPokemons, setCaughtPokemons] = useState<{
-    [key: number]: boolean;
+    [key: string]: boolean;
   }>({});
 
   // Charger l'état depuis le localStorage au chargement du composant
@@ -26,7 +26,7 @@ export default function Pokedex() {
   }, []);
 
   // Fonction pour gérer la capture du Pokémon
-  const handleCatch = (id: number) => {
+  const handleCatch = (id: string) => {
     const updatedCaughtPokemons = {
       ...caughtPokemons,
       [id]: !caughtPokemons[id], // Inverser l'état de capture
@@ -68,7 +68,7 @@ export default function Pokedex() {
             return dex.name.toLowerCase().includes(query.toLowerCase());
           })
           .map((dex, i) => {
-            const isCaught = caughtPokemons[dex.name as any] || false;
+            const isCaught = caughtPokemons[dex.name as string] || false;
 
             return (
               <div key={i} className="relative">
@@ -90,7 +90,7 @@ export default function Pokedex() {
 
                 {/* Bouton pour attraper ou relâcher le Pokémon */}
                 <Button
-                  onClick={() => handleCatch(dex.name as any)}
+                  onClick={() => handleCatch(dex.name as string)}
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-xl shadow-foreground/25"
                   variant="default"
                   size="sm"
