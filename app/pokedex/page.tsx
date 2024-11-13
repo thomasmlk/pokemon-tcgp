@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
 
-export default function Pokedex() {
+export function Pokedex() {
   const searchParams = useSearchParams();
   const query = searchParams.get("query") || "";
   const collectionSvg = "/pokedex/collection.svg";
@@ -105,7 +105,7 @@ export default function Pokedex() {
   );
 }
 
-export function PokedexPage() {
+export default function PokedexPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Pokedex />
