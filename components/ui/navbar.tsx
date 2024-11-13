@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <nav className="hidden fixed md:flex justify-center w-full top-6 z-50">
+      <nav className="hidden fixed md:flex left-1/2 -translate-x-1/2 top-6 z-50">
         <div className="flex h-14 gap-2 w-fit px-2 bg-background shadow-lg shadow-foreground/10 justify-center items-center rounded-full">
           {navigation.map((nav, i) => {
             const isActive =

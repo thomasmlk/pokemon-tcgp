@@ -6,6 +6,7 @@ import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
+import { RotateCcw } from "lucide-react";
 
 export default function Pokedex() {
   const searchParams = useSearchParams();
@@ -58,7 +59,8 @@ export default function Pokedex() {
         {/* Barre de recherche */}
         <Input className="w-full" placeholder="Search for a Pokémon..."></Input>
         <Button variant="ghost" className="text-red-500" onClick={handleReset}>
-          Réinitialiser le Pokédex
+          <span className="hidden md:flex">Reset Pokédex</span>
+          <RotateCcw className="h-11 w-11 flex md:hidden" />
         </Button>
       </div>
       {/* Grille de Pokémon */}
@@ -71,12 +73,12 @@ export default function Pokedex() {
             const isCaught = caughtPokemons[dex.name as string] || false;
 
             return (
-              <div key={i} className="relative">
+              <div key={i} className="relative group">
                 {/* Carte Pokémon */}
                 <div
-                  className={`w-full h-full md:bottom-5 aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 ${
-                    isCaught ? "opacity-100" : "opacity-40 grayscale"
-                  } transition-all duration-300`}
+                  className={`w-full h-full md:bottom-5 aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 md:group-hover:scale-105 transition-all duration-700 ease-in-out ${
+                    isCaught ? "" : "grayscale"
+                  }`}
                 >
                   <Image
                     src={dex.image}
@@ -91,11 +93,15 @@ export default function Pokedex() {
                 {/* Bouton pour attraper ou relâcher le Pokémon */}
                 <Button
                   onClick={() => handleCatch(dex.name as string)}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-xl shadow-foreground/25"
+                  className="absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-xl shadow-foreground/25"
                   variant="default"
                   size="sm"
                 >
-                  {isCaught ? <span>Relâcher</span> : <span>Attraper</span>}
+                  {isCaught ? (
+                    <span>Release</span>
+                  ) : (
+                    <span>Catch {dex.name}</span>
+                  )}
                 </Button>
               </div>
             );
