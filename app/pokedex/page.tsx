@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
@@ -102,5 +102,13 @@ export default function Pokedex() {
           })}
       </div>
     </div>
+  );
+}
+
+export function PokedexPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Pokedex />
+    </Suspense>
   );
 }
