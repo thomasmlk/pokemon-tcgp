@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { RotateCcw } from "lucide-react";
 
 export default function Pokedex() {
@@ -43,7 +44,8 @@ export default function Pokedex() {
     setCaughtPokemons({});
     localStorage.removeItem("caughtPokemons");
   };
-
+  const pathname = usePathname();
+  if (!pathname) return null;
   return (
     <div className="px-5 mt-24 lg:mt-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
       {/* Header de la collection */}
@@ -70,6 +72,7 @@ export default function Pokedex() {
             return dex.name.toLowerCase().includes(query.toLowerCase());
           })
           .map((dex, i) => {
+
             const isCaught = caughtPokemons[dex.name as string] || false;
             const rarityValue = parseInt(dex.rarity);
 
@@ -91,7 +94,7 @@ export default function Pokedex() {
 
             const getPackIcon = (pack: string) => {
               switch (pack) {
-                case "Genetic Apex":
+                case "genetic-apex":
                   return "/pack/apex_mewtwo.png";
                 default:
                   return null;
@@ -106,20 +109,22 @@ export default function Pokedex() {
                 className="relative group flex flex-col gap-4 md:gap-0"
               >
                 {/* Carte Pokémon */}
-                <div
-                  className={`w-full h-full md:bottom-5 aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 md:group-hover:scale-105 transition-all duration-700 ease-in-out ${
-                    isCaught ? "" : "grayscale"
-                  }`}
-                >
-                  <Image
-                    src={dex.image}
-                    alt={dex.name}
-                    objectFit="cover"
-                    fill
-                    className="absolute"
-                    quality={100}
-                  />
-                </div>
+                <Link href={`${pathname}/${dex.pack}/${dex.name.toLowerCase()}`}>
+                  <div
+                    className={`w-full h-full md:bottom-5 aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 md:group-hover:scale-105 transition-all duration-700 ease-in-out ${
+                      isCaught ? "" : "grayscale"
+                    }`}
+                  >
+                    <Image
+                      src={dex.image}
+                      alt={dex.name}
+                      objectFit="cover"
+                      fill
+                      className="absolute"
+                      quality={100}
+                    />
+                  </div>
+                </Link>
 
                 {/* Bouton pour attraper ou relâcher le Pokémon */}
                 <Button
