@@ -3,7 +3,6 @@
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Pokedex from "../../page";
 import { MoveLeft } from "lucide-react";
 import allDex from "@/app/pokedex/dex.json";
 
