@@ -1,28 +1,33 @@
 "use client";
 
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import allDex from "@/app/pokedex/dex.json";
 
+interface Pokemon {
+  name: string;
+  pack: string;
+  image: string;
+  rarity: string;
+}
+
 export default function DexNav() {
-  const router = useRouter();
   const params = useParams();
   const pack = params?.pack as string;
   const name = params?.name as string;
 
   // État pour stocker les informations du Pokémon
-  const [pokemonData, setPokemonData] = useState<any>(null);
+  const [pokemonData, setPokemonData] = useState<Pokemon | null>(null);
 
   useEffect(() => {
-    // Trouver le Pokémon correspondant
     const pokemon = allDex.find(
       (dex) =>
         dex.pack.toLowerCase() === pack.toLowerCase() &&
         dex.name.toLowerCase() === name.toLowerCase()
     );
-    setPokemonData(pokemon);
+    setPokemonData(pokemon || null); // Si aucun Pokémon n'est trouvé, on définit `null`
   }, [pack, name]);
 
   if (!pokemonData) {
