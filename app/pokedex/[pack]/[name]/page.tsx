@@ -3,10 +3,12 @@
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+import Pokedex from "../../page";
+import { MoveLeft } from "lucide-react";
 import allDex from "@/app/pokedex/dex.json";
 
 interface Pokemon {
+  id: string;
   name: string;
   pack: string;
   image: string;
@@ -34,19 +36,31 @@ export default function DexNav() {
     return <p>Loading...</p>;
   }
   return (
-    <div className="mt-24 lg:mt-36 max-w-screen-md mx-auto px-5 flex flex-col gap-10">
+    <div className="mt-24 lg:mt-36 max-w-screen-xl mx-auto px-5 flex flex-col gap-10">
       <div className="h-11 px-5 flex gap-3 rounded-full justify-center items-center w-fit bg-background shadow-lg shadow-foreground/10">
-        <ArrowLeft className="h-7 w-7" />
+        <MoveLeft className="h-5 w-5" />
         <p className="font-semibold">Retour au Pokédex</p>
       </div>
-      <div className="grid md:grid-cols-2">
-        <div className="relative w-full aspect-[7.2/10]">
-          <Image
-            src={pokemonData.image}
-            alt={pokemonData.name}
-            fill
-            objectFit="cover"
-          />
+      <div className="w-full">
+        <div className="grid md:grid-cols-2 gap-20 mx-auto max-w-screen-md">
+          <div className="relative w-full aspect-[7.2/10]">
+            <Image
+              src={pokemonData.image}
+              alt={pokemonData.name}
+              fill
+              objectFit="cover"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h1 className="font-bold text-2xl tracking-tight">
+              {pokemonData.name}
+            </h1>
+            <div className="flex h-11 px-5 rounded-full shadow-xl shadow-foreground/10 items-center justify-center">
+              <div className="bg-background shadow-neumorphism px-5 rounded-full">
+                <p className="font-bold">{pokemonData.id}/226</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
