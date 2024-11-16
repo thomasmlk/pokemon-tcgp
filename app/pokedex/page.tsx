@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getRarityIcons } from "@/app/utils/getRarityIcons";
+import { getPackIcons } from "@/app/utils/getPackIcons";
 import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -47,7 +49,7 @@ export default function Pokedex() {
   const pathname = usePathname();
   if (!pathname) return null;
   return (
-    <div className="px-5 mt-24 lg:mt-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
+    <div className="px-5 my-24 lg:my-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
       {/* Header de la collection */}
       <div className="bg-background relative flex overflow-hidden justify-center items-center w-full p-14 rounded-t-xl shadow-lg shadow-foreground/15">
         <h1 className="font-bold text-2xl tracking-tight z-10">Collection</h1>
@@ -74,34 +76,9 @@ export default function Pokedex() {
           .map((dex, i) => {
 
             const isCaught = caughtPokemons[dex.name as string] || false;
-            const rarityValue = parseInt(dex.rarity);
 
-            // Calculer les icônes de rareté
-            let icons: string[] = [];
-            if (rarityValue >= 1 && rarityValue <= 4) {
-              icons = Array.from(
-                { length: rarityValue },
-                () => "/rarity/rarity_01.png"
-              );
-            } else if (rarityValue >= 5 && rarityValue <= 7) {
-              icons = Array.from(
-                { length: rarityValue },
-                () => "/rarity/rarity_02.png"
-              );
-            } else {
-              icons = ["/rarity/rarity_03.png"];
-            }
-
-            const getPackIcon = (pack: string) => {
-              switch (pack) {
-                case "genetic-apex":
-                  return "/pack/apex_mewtwo.png";
-                default:
-                  return null;
-              }
-            };
-
-            const packIcon = getPackIcon(dex.pack);
+            const packIcons = getPackIcons(dex.pack);
+            const rarityIcons = getRarityIcons(dex.rarity);
 
             return (
               <div
@@ -141,7 +118,7 @@ export default function Pokedex() {
                 </Button>
                 <div className="flex justify-between relative">
                   <div className="flex gap-1">
-                    {icons.map((icon, i) => (
+                    {rarityIcons.map((icon, i) => (
                       <Image
                         key={i}
                         src={icon}
@@ -153,7 +130,7 @@ export default function Pokedex() {
                   </div>
                   <div className="h-full w-10 relative">
                     <Image
-                      src={packIcon as string}
+                      src={packIcons as string}
                       alt={dex.pack}
                       fill
                       objectFit="contain"
