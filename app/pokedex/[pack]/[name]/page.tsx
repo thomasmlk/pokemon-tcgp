@@ -1,10 +1,11 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { getRarityIcons } from "@/utils/getRarityIcons";
 import { getPackIcons } from "@/utils/getPackIcons";
-import Image from "next/image";
 import { MoveLeft } from "lucide-react";
 import allDex from "@/app/pokedex/dex.json";
 
@@ -20,6 +21,7 @@ interface Pokemon {
 
 export default function DexNav() {
   const params = useParams();
+  const router = useRouter();
   const pack = params?.pack as string;
   const name = params?.name as string;
 
@@ -44,10 +46,10 @@ export default function DexNav() {
 
   return (
     <div className="my-24 lg:my-36 max-w-screen-xl mx-auto px-5 flex flex-col gap-10">
-      <button className="h-11 px-5 flex gap-3 rounded-full justify-center items-center w-fit bg-background shadow-lg shadow-foreground/10">
+      <Button variant="secondary" onClick={router.back}>
         <MoveLeft className="h-5 w-5" />
         <p className="font-semibold">Retour au Pokédex</p>
-      </button>
+      </Button>
 
       <div className="flex w-full flex-col md:flex-row items-center md:items-start gap-14 mx-auto max-w-screen-md">
         <div className="relative basis-2/5 mx-auto w-full aspect-[7.2/10] shadow-2xl shadow-foreground/40 rounded-lg">

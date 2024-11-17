@@ -3,7 +3,7 @@ import {
   MewtwoSvg,
   CharizardSvg,
   PikachuSvg,
-} from "@/components/ui/rectangleSvgSelector";
+} from "@/utils/rectangleSvgSelector";
 
 export default function Home() {
   return (

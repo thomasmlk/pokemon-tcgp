@@ -48,6 +48,7 @@ export default function Pokedex() {
   };
   const pathname = usePathname();
   if (!pathname) return null;
+
   return (
     <div className="px-5 my-24 lg:my-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
       {/* Header de la collection */}
