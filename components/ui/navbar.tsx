@@ -18,16 +18,16 @@ export default function Navbar() {
       path: "/pokedex",
     },
     {
+      label: "Events",
+      path: "/events",
+    },
+    {
       label: "Community",
       path: "/community",
     },
     {
       label: "Stats",
       path: "/stats",
-    },
-    {
-      label: "Settings",
-      path: "/settings",
     },
   ];
   const pathname = usePathname();

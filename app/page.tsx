@@ -1,4 +1,9 @@
 import Image from "next/image";
+import {
+  MewtwoSvg,
+  CharizardSvg,
+  PikachuSvg,
+} from "@/components/ui/rectangleSvgSelector";
 
 export default function Home() {
   return (
@@ -13,48 +18,57 @@ export default function Home() {
             Packs
           </a>
           <a className="font-semibold" href="#">
-            Cards
-          </a>
-          <a className="font-semibold" href="#">
             Events
           </a>
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-10 md:gap-5 w-full">
-        <div className="flex flex-col gap-3 w-full">
-          <div className="relative overflow-hidden aspect-[7/4] w-full bg-gradient-to-r from-blue-200 to-purple-200 rounded-2xl">
+        <div className="flex flex-col gap-4 w-full">
+          <div className="relative overflow-hidden aspect-[7/4] w-full bg-background shadow-xl shadow-foreground/10 rounded-2xl">
             <Image
               src="/assets/pack_mewtwo.png"
               alt="Genetic Apex Mewtwo pack"
               fill
               objectFit="contain"
+              className="z-10"
             />
+            <div className="absolute w-full h-full">
+              <MewtwoSvg />
+            </div>
           </div>
           <span className="font-medium">
             <span className="font-bold">Apex Mewtwo</span> from Genetic Apex
           </span>
         </div>
-        <div className="flex flex-col gap-3 w-full">
-          <div className="relative overflow-hidden aspect-[7/4] w-full bg-gradient-to-r from-orange-200 to-red-200 rounded-2xl">
+        <div className="flex flex-col gap-4 w-full">
+          <div className="relative overflow-hidden aspect-[7/4] w-full bg-background shadow-xl shadow-foreground/10 rounded-2xl">
             <Image
               src="/assets/pack_charizard.png"
               alt="Genetic Apex Charizard pack"
               fill
               objectFit="contain"
+              className="z-10"
             />
+            <div className="absolute w-full h-full">
+              <CharizardSvg />
+            </div>
           </div>
           <span className="font-medium">
             <span className="font-bold">Apex Charizard</span> from Genetic Apex
           </span>
         </div>
-        <div className="flex flex-col gap-3 w-full">
-          <div className="relative overflow-hidden aspect-[7/4] w-full bg-gradient-to-r from-yellow-200 to-amber-200 rounded-2xl">
+        <div className="flex flex-col gap-4 w-full">
+          <div className="relative overflow-hidden aspect-[7/4] w-full bg-background shadow-xl shadow-foreground/10 rounded-2xl">
             <Image
               src="/assets/pack_pikachu.png"
               alt="Genetic Apex Pikachu pack"
               fill
               objectFit="contain"
+              className="z-10"
             />
+            <div className="absolute w-full h-full">
+              <PikachuSvg />
+            </div>
           </div>
           <span className="font-medium">
             <span className="font-bold">Apex Pikachu</span> from Genetic Apex
