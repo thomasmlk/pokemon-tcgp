@@ -74,7 +74,6 @@ export default function Pokedex() {
             return dex.name.toLowerCase().includes(query.toLowerCase());
           })
           .map((dex, i) => {
-
             const isCaught = caughtPokemons[dex.name as string] || false;
 
             const packIcons = getPackIcons(dex.pack);
@@ -86,7 +85,9 @@ export default function Pokedex() {
                 className="relative group flex flex-col gap-4 md:gap-0"
               >
                 {/* Carte Pokémon */}
-                <Link href={`${pathname}/${dex.pack}/${dex.name.toLowerCase()}`}>
+                <Link
+                  href={`${pathname}/${dex.pack}/${dex.name.toLowerCase()}`}
+                >
                   <div
                     className={`w-full h-full md:bottom-5 aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 md:group-hover:scale-105 transition-all duration-700 ease-in-out ${
                       isCaught ? "" : "grayscale"
@@ -106,7 +107,7 @@ export default function Pokedex() {
                 {/* Bouton pour attraper ou relâcher le Pokémon */}
                 <Button
                   onClick={() => handleCatch(dex.name as string)}
-                  className="absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-xl shadow-foreground/25"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-xl shadow-foreground/25"
                   variant="default"
                   size="sm"
                 >

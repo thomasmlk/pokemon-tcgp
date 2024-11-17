@@ -5,7 +5,9 @@
     "type": "Grass",
     "image": "/pokedex/bulbasaur.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "2",
@@ -13,7 +15,9 @@
     "type": "Grass",
     "image": "/pokedex/ivysaur.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "3",
@@ -21,7 +25,9 @@
     "type": "Grass",
     "image": "/pokedex/venusaur.png",
     "rarity": "3",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "3",
@@ -29,7 +35,9 @@
     "type": "Grass",
     "image": "/pokedex/venusaur-ex.png",
     "rarity": "4",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "10",
@@ -37,7 +45,9 @@
     "type": "Grass",
     "image": "/pokedex/caterpie.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "11",
@@ -45,7 +55,9 @@
     "type": "Grass",
     "image": "/pokedex/metapod.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "12",
@@ -53,7 +65,9 @@
     "type": "Grass",
     "image": "/pokedex/butterfree.png",
     "rarity": "3",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "13",
@@ -61,7 +75,9 @@
     "type": "Grass",
     "image": "/pokedex/weedle.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "14",
@@ -69,7 +85,9 @@
     "type": "Grass",
     "image": "/pokedex/kakuna.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "15",
@@ -77,7 +95,9 @@
     "type": "Grass",
     "image": "/pokedex/beedrill.png",
     "rarity": "3",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "43",
@@ -85,7 +105,9 @@
     "type": "Grass",
     "image": "/pokedex/oddish.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "44",
@@ -93,7 +115,9 @@
     "type": "Grass",
     "image": "/pokedex/gloom.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "45",
@@ -101,7 +125,9 @@
     "type": "Grass",
     "image": "/pokedex/vileplume.png",
     "rarity": "3",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "46",
@@ -109,7 +135,9 @@
     "type": "Grass",
     "image": "/pokedex/paras.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "47",
@@ -117,7 +145,9 @@
     "type": "Grass",
     "image": "/pokedex/parasect.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "48",
@@ -125,7 +155,9 @@
     "type": "Grass",
     "image": "/pokedex/venonat.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "49",
@@ -133,7 +165,9 @@
     "type": "Grass",
     "image": "/pokedex/venomoth.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "69",
@@ -141,7 +175,9 @@
     "type": "Grass",
     "image": "/pokedex/bellsprout.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "70",
@@ -149,7 +185,9 @@
     "type": "Grass",
     "image": "/pokedex/weepinbell.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "71",
@@ -157,7 +195,9 @@
     "type": "Grass",
     "image": "/pokedex/victreebel.png",
     "rarity": "3",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "102",
@@ -165,7 +205,9 @@
     "type": "Grass",
     "image": "/pokedex/exeggcute.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "103",
@@ -173,7 +215,9 @@
     "type": "Grass",
     "image": "/pokedex/exeggutor.png",
     "rarity": "3",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "103",
@@ -181,7 +225,9 @@
     "type": "Grass",
     "image": "/pokedex/exeggutor-ex.png",
     "rarity": "4",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "114",
@@ -189,7 +235,9 @@
     "type": "Grass",
     "image": "/pokedex/tangela.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "123",
@@ -197,7 +245,9 @@
     "type": "Grass",
     "image": "/pokedex/scyther.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "127",
@@ -205,7 +255,9 @@
     "type": "Grass",
     "image": "/pokedex/pinsir.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "546",
@@ -213,7 +265,9 @@
     "type": "Grass",
     "image": "/pokedex/cottonee.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "547",
@@ -221,7 +275,9 @@
     "type": "Grass",
     "image": "/pokedex/whimsicott.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "548",
@@ -229,7 +285,9 @@
     "type": "Grass",
     "image": "/pokedex/petilil.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "549",
@@ -237,7 +295,9 @@
     "type": "Grass",
     "image": "/pokedex/lilligant.png",
     "rarity": "2",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "672",
@@ -245,7 +305,9 @@
     "type": "Grass",
     "image": "/pokedex/skiddo.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   },
   {
     "id": "673",
@@ -253,6 +315,8 @@
     "type": "Grass",
     "image": "/pokedex/gogoat.png",
     "rarity": "1",
-    "pack": "genetic-apex"
+    "pack": "genetic-apex",
+    "packtype": "A1",
+    "illustrator": "Nurikabe"
   }
 ]
