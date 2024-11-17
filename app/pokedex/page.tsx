@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getRarityIcons } from "@/app/utils/getRarityIcons";
-import { getPackIcons } from "@/app/utils/getPackIcons";
+import { getRarityIcons } from "@/utils/getRarityIcons";
+import { getPackIcons } from "@/utils/getPackIcons";
 import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";

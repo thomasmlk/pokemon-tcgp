@@ -2,8 +2,8 @@
 
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import { getRarityIcons } from "@/app/utils/getRarityIcons";
-import { getPackIcons } from "@/app/utils/getPackIcons";
+import { getRarityIcons } from "@/utils/getRarityIcons";
+import { getPackIcons } from "@/utils/getPackIcons";
 import Image from "next/image";
 import { MoveLeft } from "lucide-react";
 import allDex from "@/app/pokedex/dex.json";
