@@ -38,7 +38,7 @@ export function Filters({
   };
 
   return (
-    <div className="flex gap-5">
+    <div className="flex flex-col md:flex-row gap-5">
       <Input
         className="w-full truncate"
         placeholder="Search for a Pokémon..."
@@ -49,7 +49,7 @@ export function Filters({
         value={selectedPack}
         onValueChange={(value) => handleSelectPack(value)}
       >
-        <SelectTrigger className="w-1/4">
+        <SelectTrigger className="w-full md:w-1/4">
           <SelectValue placeholder="Select a Pack" />
         </SelectTrigger>
         <SelectContent>
@@ -62,8 +62,7 @@ export function Filters({
 
       {/* Bouton pour réinitialiser les Pokémon capturés */}
       <Button variant="ghost" className="text-red-500" onClick={handleReset}>
-        <span className="hidden md:flex">Reset Pokédex</span>
-        <RotateCcw className="h-11 w-11 flex md:hidden" />
+        <span className="flex">Reset Pokédex</span>
       </Button>
     </div>
   );
