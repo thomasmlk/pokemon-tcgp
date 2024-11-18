@@ -7,6 +7,13 @@ import { getRarityIcons } from "@/utils/getRarityIcons";
 import { getPackIcons } from "@/utils/getPackIcons";
 import allDex from "@/app/pokedex/api/fetchCards";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { usePathname, useSearchParams } from "next/navigation";
 import { RotateCcw } from "lucide-react";
@@ -20,6 +27,9 @@ export default function Pokedex() {
   const [caughtPokemons, setCaughtPokemons] = useState<{
     [key: string]: boolean;
   }>({});
+
+  // État pour le pack sélectionné
+  const [selectedPack, setSelectedPack] = useState("all");
 
   // Charger l'état depuis le localStorage au chargement du composant
   useEffect(() => {
@@ -45,9 +55,14 @@ export default function Pokedex() {
   const handleReset = () => {
     setCaughtPokemons({});
     localStorage.removeItem("caughtPokemons");
+    setSelectedPack("all"); // Réinitialiser le filtre pack sur "All Packs"
   };
+
   const pathname = usePathname();
   if (!pathname) return null;
+
+  // Récupérer les packs uniques
+  const uniquePacks = Array.from(new Set(allDex.map((dex) => dex.pack)));
 
   return (
     <div className="px-5 my-24 lg:my-36 flex flex-col gap-10 max-w-screen-xl mx-auto">
@@ -62,17 +77,42 @@ export default function Pokedex() {
 
       <div className="flex gap-5">
         {/* Barre de recherche */}
-        <Input className="w-full" placeholder="Search for a Pokémon..."></Input>
+        <Input className="w-full" placeholder="Search for a Pokémon..." />
+
+        {/* Sélect pour filtrer par pack */}
+        <Select
+          value={selectedPack}
+          onValueChange={(value) => setSelectedPack(value)}
+        >
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Select a Pack" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Packs</SelectItem>
+            <SelectItem value="apex-mewtwo">Apex Mewtwo</SelectItem>
+            <SelectItem value="apex-charizard">Apex Charizard</SelectItem>
+            <SelectItem value="apex-pikachu">Apex Pikachu</SelectItem>
+            {/* Ajoute les autres packs ici */}
+          </SelectContent>
+        </Select>
+
         <Button variant="ghost" className="text-red-500" onClick={handleReset}>
           <span className="hidden md:flex">Reset Pokédex</span>
           <RotateCcw className="h-11 w-11 flex md:hidden" />
         </Button>
       </div>
+
       {/* Grille de Pokémon */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-5 gap-y-10 md:gap-y-20 md:gap-x-10 mt-10">
         {allDex
           .filter((dex) => {
-            return dex.name.toLowerCase().includes(query.toLowerCase());
+            const matchesQuery = dex.name
+              .toLowerCase()
+              .includes(query.toLowerCase());
+            const matchesPack =
+              selectedPack === "all" || dex.pack === selectedPack;
+
+            return matchesQuery && matchesPack;
           })
           .map((dex, i) => {
             const isCaught = caughtPokemons[dex.name as string] || false;
