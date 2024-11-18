@@ -4,8 +4,15 @@ import { Button } from "@/components/ui/button";
 import { getRarityIcons } from "@/utils/getRarityIcons";
 import { getPackIcons } from "@/utils/getPackIcons";
 
+interface PokemonCardType {
+  name: string;
+  image: string;
+  pack: string;
+  rarity: string;
+}
+
 interface PokemonCardProps {
-  dex: any;
+  dex: PokemonCardType;
   isCaught: boolean;
   handleCatch: (id: string) => void;
 }
