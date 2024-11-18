@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -22,6 +25,18 @@ export function Filters({
   query,
   handleReset,
 }: FiltersProps) {
+  const router = useRouter(); // 🌟 Utilisation de useRouter
+  const searchParams = useSearchParams(); // 🌟 Utilisation de useSearchParams
+
+  // 🌟 Fonction pour mettre à jour l'URL avec le paramètre `pack`
+  const handleSelectPack = (value: string) => {
+    setSelectedPack(value);
+
+    // Mise à jour de l'URL avec le paramètre `pack`
+    const currentQuery = searchParams.get("query") || "";
+    router.push(`/pokedex?pack=${value}&query=${currentQuery}`);
+  };
+
   return (
     <div className="flex gap-5">
       <Input
@@ -32,7 +47,7 @@ export function Filters({
 
       <Select
         value={selectedPack}
-        onValueChange={(value) => setSelectedPack(value)}
+        onValueChange={(value) => handleSelectPack(value)}
       >
         <SelectTrigger className="w-1/4">
           <SelectValue placeholder="Select a Pack" />
