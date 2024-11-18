@@ -10,7 +10,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { RotateCcw } from "lucide-react";
 
 interface FiltersProps {
   selectedPack: string;
