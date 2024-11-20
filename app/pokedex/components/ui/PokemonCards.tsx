@@ -26,7 +26,7 @@ export function PokemonCard({ dex, isCaught, handleCatch }: PokemonCardProps) {
     <div className="relative group flex flex-col gap-4">
       <Link href={`/pokedex/${pack}/${name.toLowerCase()}`}>
         <div
-          className={`w-full h-full aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 ${
+          className={`w-full h-full aspect-[7.2/10] relative rounded-lg overflow-hidden shadow-2xl shadow-foreground/40 hover:scale-105 duration-700 transition-all ease-in-out ${
             isCaught ? "" : "grayscale"
           }`}
         >
