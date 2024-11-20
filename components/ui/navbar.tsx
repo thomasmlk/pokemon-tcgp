@@ -17,18 +17,6 @@ export default function Navbar() {
       label: "Pokédex",
       path: "/pokedex",
     },
-    {
-      label: "Events",
-      path: "/events",
-    },
-    {
-      label: "Community",
-      path: "/community",
-    },
-    {
-      label: "Stats",
-      path: "/stats",
-    },
   ];
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
